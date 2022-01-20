@@ -1,0 +1,34 @@
+<p>Soy listado  , para listar personas</p>
+
+<!-- <button type="button" class="btn btn-success">Navegar</button> -->
+<!-- <button type="button" class="btn btn-danger">Navegar</button> -->
+
+
+<p>
+    <a class= "btn btn-primary" routerLink= "/personas-add/-1" role="button">Añadir Persona</a>
+    <span>|</span>
+    <button type="button" class="btn btn-success" (click)="addPersona()">Navegar</button>
+</p>
+<table class="table table-hover table-striped table-sm">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>APELLIDOS</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let persona of lista_personas;">
+                <td class="table-primary">{{persona.id}}</td>
+                <td>{{persona.dni}}</td>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellidos}}</td>
+
+            </tr>
+        </tbody>
+
+
+
+</table>
